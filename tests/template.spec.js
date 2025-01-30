@@ -62,13 +62,5 @@ test.describe('Шаблон', () => {
         await page.getByRole('button', {name: 'Post Comment'}).click();
         await expect(page.locator('.card-text')).toContainText("Отличная статья!");
     });
-
-    test('Пользователь может изменить пароль и залогиниться с новым паролем)', async ({page,}) => {
-       const yourfeedPage = new YourfeedPage(page);
-       const registerPage = new RegisterPage(page);
-       const newPassword = faker.internet.password();
-       await expect(registerPage.usernameField).toContainText();
-
-   });
 });
 
