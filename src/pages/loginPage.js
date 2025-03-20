@@ -1,3 +1,5 @@
+import {test} from '@playwright/test';
+
 export class LoginPage {
     constructor(page) {
         this.page = page;
@@ -8,12 +10,13 @@ export class LoginPage {
         this.passwordField = page.getByPlaceholder('Password');
 
     }
-    async login(email, password) {
-
-        await this.emailField.click();
-        await this.emailField.fill(email);
-        await this.passwordField.click();
-        await this.passwordField.fill(password);
-        await this.loginButton.click();
+    async getAuthorization(email, password) {
+        await test.step('Авторизоваться', async () => {
+            await this.emailField.click();
+            await this.emailField.fill(email);
+            await this.passwordField.click();
+            await this.passwordField.fill(password);
+            await this.loginButton.click();
+        });
     }
 }

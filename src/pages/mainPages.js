@@ -1,3 +1,5 @@
+import {test} from '@playwright/test';
+
 export class MainPage {
     constructor(page) {
         this.page = page;
@@ -5,12 +7,18 @@ export class MainPage {
         this.loginButton = page.getByRole('link', { name: 'Login' });
     }
     async goToRegister() {
-        await this.signUpButton.click();
+        await test.step('Перейти на страницу регистрации', async () => {
+            await this.signUpButton.click();
+        });
     }
     async goToLogin() {
-        await this.loginButton.click();
+        await test.step('Перейти на страницу авторизации', async () => {
+            await this.loginButton.click();
+        });
     }
-    async open(url) {
-        await this.page.goto(url);
+    async open(url = 'https://realworld.qa.guru/') {
+        await test.step('Открыть сайт', async () => {
+            await this.page.goto(url);
+        });
     }
 }
