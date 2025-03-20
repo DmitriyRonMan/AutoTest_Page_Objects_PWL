@@ -6,7 +6,7 @@
       "localStorage": [
         {
           "name": "loggedUser",
-          "value": "{\"headers\":{\"Authorization\":\"Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlZm9yMjQ3NTlAc2hvdXhzLmNvbSIsImlhdCI6MTc0MjQ2NzczMn0.rvr7n8vwwr8BxLRcbXtFQi-re3siVGG1xNfS5ePHe0s\"},\"isAuth\":true,\"loggedUser\":{\"email\":\"gefor24759@shouxs.com\",\"username\":\"demo\",\"bio\":null,\"image\":null,\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlZm9yMjQ3NTlAc2hvdXhzLmNvbSIsImlhdCI6MTc0MjQ2NzczMn0.rvr7n8vwwr8BxLRcbXtFQi-re3siVGG1xNfS5ePHe0s\"}}"
+          "value": "{\"headers\":{\"Authorization\":\"Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlZm9yMjQ3NTlAc2hvdXhzLmNvbSIsImlhdCI6MTc0MjQ3NTI1NX0.VS3M_oF-7dYpiXee_KzZVpNTwM6idUxsB9NEzqx3uhI\"},\"isAuth\":true,\"loggedUser\":{\"email\":\"gefor24759@shouxs.com\",\"username\":\"demo\",\"bio\":null,\"image\":null,\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlZm9yMjQ3NTlAc2hvdXhzLmNvbSIsImlhdCI6MTc0MjQ3NTI1NX0.VS3M_oF-7dYpiXee_KzZVpNTwM6idUxsB9NEzqx3uhI\"}}"
         }
       ]
     }

@@ -1,20 +1,22 @@
-import {test as setup, expect, test} from '@playwright/test';
+import {test as setup, expect} from '@playwright/test';
 import { LoginPage, MainPage, YourfeedPage } from '../src/pages/index';
+import {UserBuilder} from "../src/helpers/builder/index";
 import path from 'path';
-// todo вынести в отдельное место
-const URL_UI = 'https://realworld.qa.guru/';
 
-//todo
 const userFile = 'playwright/.auth/userFile.json';
 
-test('Это новый тест', async ({ page }) => {
+setup('Авторизация', async ({ page }) => {
+
     const mainPage = new MainPage(page);
     const loginPage = new LoginPage(page);
     const yourfeedPage = new YourfeedPage(page);
-    await mainPage.open(URL_UI);
+    const userBuilder = new UserBuilder()
+        .addEmailAuth()
+        .addPasswordAuth()
+        .generate();
+    await mainPage.open();
     await mainPage.goToLogin();
-    //todo спрятать учетку
-    await loginPage.getAuthorization('gefor24759@shouxs.com', '12345');
+    await loginPage.getAuthorization(userBuilder.emailAuth, userBuilder.passwordAuth);
     await expect(yourfeedPage.profileNameField).toContainText('demo');
     await page.context().storageState({ path: userFile });
 });

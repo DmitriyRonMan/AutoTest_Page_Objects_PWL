@@ -7,8 +7,17 @@ export class UserBuilder {
         return this;
     }
 
+    addEmailAuth() {
+        this.userEmailAuth = 'gefor24759@shouxs.com';
+        return this;
+    }
+
     addPassword(symbol = 10) {
         this.userPassword = faker.internet.password({length: symbol});
+        return this;
+    }
+    addPasswordAuth() {
+        this.userPasswordAuth = '12345';
         return this;
     }
 
@@ -25,9 +34,11 @@ export class UserBuilder {
     generate() {
         return {
             email: this.userEmail,
+            emailAuth: this.userEmailAuth,
             username: this.userName,
             password: this.userPassword,
             newPassword: this.newPassword,
+            passwordAuth: this.userPasswordAuth,
         };
     }
 }
